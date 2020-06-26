@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane id="AnchorPane" prefHeight="354.0" prefWidth="395.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="View_Controller.UpdateCustomerScreenController">
+   <children>
+      <VBox layoutX="24.0" layoutY="35.0" prefHeight="200.0" prefWidth="100.0" spacing="13.5">
+         <children>
+            <Label fx:id="customerIdLabel" text="Customer ID" />
+            <Label text="Name" />
+            <Label text="Address" />
+            <Label text="Address 2" />
+            <Label text="City" />
+            <Label text="Country" />
+            <Label text="Postal Code" />
+            <Label text="Phone" />
+            <Label text="Active" />
+         </children>
+      </VBox>
+      <VBox layoutX="124.0" layoutY="35.0" prefHeight="235.0" prefWidth="216.0" spacing="5.0">
+         <children>
+            <TextField fx:id="customerIdTextField" disable="true" editable="false" />
+            <TextField fx:id="nameTextField" />
+            <TextField fx:id="addressTextField" />
+            <TextField fx:id="address2TextField" promptText="Enter N/A if not needed" />
+            <TextField fx:id="cityTextField" />
+            <TextField fx:id="countryTextField" />
+            <TextField fx:id="postalCodeTextField" />
+            <TextField fx:id="phoneTextField" />
+            <HBox alignment="BOTTOM_LEFT" prefHeight="100.0" prefWidth="200.0" spacing="10.0">
+               <children>
+                  <RadioButton fx:id="activeRadioButton" mnemonicParsing="false" selected="true" text="Yes">
+                     <toggleGroup>
+                        <ToggleGroup fx:id="activeToggleGroup" />
+                     </toggleGroup>
+                  </RadioButton>
+                  <RadioButton fx:id="inactiveRadioButton" mnemonicParsing="false" text="No" toggleGroup="$activeToggleGroup" />
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+      <ButtonBar layoutX="117.0" layoutY="300.0" prefHeight="40.0" prefWidth="223.0">
+         <buttons>
+            <Button fx:id="cancelButton" mnemonicParsing="false" onAction="#returnToCustomerManagementScreen" text="Cancel" />
+            <Button fx:id="updateCustomerButton" mnemonicParsing="false" onAction="#updateCustomer" text="Update" />
+         </buttons>
+      </ButtonBar>
+   </children>
+</AnchorPane>
